@@ -1,0 +1,9 @@
+<h1>Tasks</h1>
+
+<div class="container">
+  <% @tasks.each do |task| %>
+    <input type="checkbox">
+    <%= link_to("#{task.title}", "tasks/#{task.id}", method: :get )%>
+    <p><%= task.details %></p>
+  <% end %>
+</div>

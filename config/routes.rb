@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  # Create a new task
+  get 'tasks/new', to: 'tasks#new'
+  post 'tasks', to: 'tasks#create'
+
+  # Read all tasks
+  get 'tasks', to: 'tasks#index'
+
+  # Read one task
+  get 'tasks/:id', to: 'tasks#show'
 end
