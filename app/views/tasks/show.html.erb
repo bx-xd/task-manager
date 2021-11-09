@@ -5,4 +5,11 @@
   <%= @task.details %>
 </div>
 <br>
+<%= link_to "Delete #{@task.title}",
+            task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+<br>
+<%= link_to("Editer", edit_task_path, method: :get) %>
+<br>
 <%= link_to("retourner à la list des tâches", '/tasks', method: :get) %>
